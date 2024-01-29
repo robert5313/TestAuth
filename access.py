@@ -8,8 +8,8 @@ import base64
 app = Flask(__name__)
 
 base_url = 'https://sandbox.safaricom.co.ke/oauth/v1/generate?grant_type=client_credentials'
-consumer_key = 'bGjbec3hb8M6rIXuLYueh6awidAyeFtr'
-consumer_secret = 'Z32ygIZf93G2uhjb'
+consumer_key = 'xxxxxxxxxxxxxxxxxxxxxxxxxx'
+consumer_secret = 'xxxxxxxxxxxxxxxxxxxxxxxxx'
 
 
 @app.route('/')
@@ -18,8 +18,6 @@ def home():
 
 @app.route('/access_token')
 def get_access_token():
-    # consumer_key = 'bGjbec3hb8M6rIXuLYueh6awidAyeFtr'
-    # consumer_secret = 'Z32ygIZf93G2uhjb'
     endpoint = 'https://sandbox.safaricom.co.ke/oauth/v1/generate?grant_type=client_credentials'
 
     data = (requests.get(endpoint, auth=HTTPBasicAuth(consumer_key, consumer_secret))).json()
